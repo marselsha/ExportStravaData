@@ -3,7 +3,7 @@ This code does the following:
 1. Connect to Strava API using StravaLib to export Activity and Activity Best Effort data
 2. Load the data into Google Sheets
 
-After the data is loaded into Google Sheets, I visualize and analyze it using Tableau. The resulting workbook is published on [my Tableau Public profile]([url](https://public.tableau.com/app/profile/marsel.shamgunov)).
+After the data is loaded into Google Sheets, I visualize and analyze it using Tableau. The resulting workbook is published on my Tableau Public profile: https://public.tableau.com/app/profile/marsel.shamgunov
 
 # Helpful resources used to write this code: 
 https://stravalib.readthedocs.io/en/latest/get-started/activities.html
