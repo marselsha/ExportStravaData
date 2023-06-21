@@ -3,9 +3,13 @@ Use Python to connect to Strava API and retrieve data on my tracked runs. This d
 
 # Helpful resources used to write this code: 
 https://stravalib.readthedocs.io/en/latest/get-started/activities.html
+
 https://medium.com/analytics-vidhya/accessing-user-data-via-the-strava-api-using-stravalib-d5bee7fdde17
 
 # Generating the initial CODE variable: 
+
+Use the second link above as a more detailed guide of this process if needed.
+
 1. Create your Strava API application
 2. Get your Client ID
 3. Replace the Client ID in this URL, and open the URL:
