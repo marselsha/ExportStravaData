@@ -31,6 +31,7 @@ CODE = 'xxxxx'
 GOOGLE_SHEET_ID = 'xxxxx'
 LOCATION_OF_STRAVA_TOKEN_ON_GDRIVE = 'gdrive/MyDrive/Colab Notebooks/strava_access_token.pickle'
 LOCATION_OF_GOOGLE_TOKEN_ON_GDRIVE = 'gdrive/MyDrive/Colab Notebooks/google_secret.json'
+LOCATION_OF_GOOGLE_TOKEN_LOCAL_DIRECTORY = '/root/.config/gspread_pandas/'
 LOCATION_OF_GOOGLE_TOKEN_LOCALLY = '/root/.config/gspread_pandas/google_secret.json'
 LOCATION_OF_STRAVA_TOKEN_LOCALLY = '../access_token.pickle'
 
@@ -179,8 +180,10 @@ if __name__ == "__main__":
   client = Client()
 
   # Mount Google Drive
-  shutil.copy(LOCATION_OF_GOOGLE_TOKEN_ON_GDRIVE, LOCATION_OF_GOOGLE_TOKEN_LOCALLY)
   drive.mount('/content/gdrive')
+  os.mkdir(LOCATION_OF_GOOGLE_TOKEN_LOCAL_DIRECTORY)
+  shutil.copy(LOCATION_OF_GOOGLE_TOKEN_ON_GDRIVE, LOCATION_OF_GOOGLE_TOKEN_LOCALLY)
+  
 
   # Authenticate to Strava
   authenticate_strava()
