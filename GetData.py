@@ -107,8 +107,8 @@ def get_best_effort_detail_for_activity(activity_id):
   data = [{
             'Activity_id': activity.id,
             'Distance_m': int(best_effort.distance),
-            'Elapsed_time_sec': best_effort.elapsed_time.seconds,
-            'Moving_time_sec': best_effort.moving_time.seconds,
+            'Elapsed_time_sec': best_effort.elapsed_time,
+            'Moving_time_sec': best_effort.moving_time,
             'Name': best_effort.name
           } for best_effort in activity.best_efforts]
   # Convert the list of dictionaries into a pandas DataFrame
